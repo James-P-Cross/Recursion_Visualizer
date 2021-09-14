@@ -5,7 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+//   node: process.env.NODE_ENV,
   mode: 'development',
+  devServer: {
+    port: 8080,
+  },
   //may need to change entry point
   entry: {
     main: path.resolve(__dirname, './src/index.js')
@@ -19,7 +23,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
-      template: path.resolve(__dirname, './src/template.html'), // template file
+      template: path.resolve(__dirname, './src/index.html'), // template file
       filename: 'index.html' //output file
     }),
     new CleanWebpackPlugin(),
@@ -43,7 +47,5 @@ module.exports = {
       }
     ]
   }
-  
-
 
 };
