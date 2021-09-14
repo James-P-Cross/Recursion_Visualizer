@@ -1,0 +1,18 @@
+h1 {
+    color: red;
+}
+
+.box {
+    height:100px;
+    width: 100px;
+    background-color: coral;
+}
+
+#textArea {
+    background-color: darkgoldenrod;
+}
+
+body {
+    background-color: rgb(170, 170, 235);
+}
+

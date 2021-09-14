@@ -12,11 +12,12 @@ module.exports = {
   },
   //may need to change entry point
   entry: {
-    main: path.resolve(__dirname, './src/index.js')
+    // main: path.resolve(__dirname, './src/index.js')
+    main: path.resolve(__dirname, './src/App.jsx')
   },
   //where bundle resolves
   output: {
-    //dist where production code will get built
+    //dist where production code will get built. This endpoint doesn't even exist anymore. . . 
     path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js'
   },
@@ -31,7 +32,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
