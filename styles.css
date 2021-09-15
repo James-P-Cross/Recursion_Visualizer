@@ -16,3 +16,7 @@ body {
     background-color: rgb(170, 170, 235);
 }
 
+.submitButton {
+    background-color: darkgreen;
+}
+

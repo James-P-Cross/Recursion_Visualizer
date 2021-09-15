@@ -14,7 +14,8 @@ router.use('/',
     //the visuals
     //return answer to function AKA output
     res.status(200).json({
-      api: 'reached',
+    //   console.log(res.locals.Visuals),
+      Visuals: [...res.locals.Visuals]
     });
   }
 
