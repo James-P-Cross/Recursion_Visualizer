@@ -20,7 +20,7 @@ module.exports = {
   //where bundle resolves
   output: {
     //dist where production code will get built. This endpoint doesn't even exist anymore. . . 
-    publicPath: '/build',
+    publicPath: '/',
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js'
   },
@@ -35,7 +35,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.jsx?/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -55,13 +55,14 @@ module.exports = {
     ]
   },
   devServer: {
-    static: {directory: path.join(__dirname, '/src')},
+    static: {    
+    publicPath: '/',
+    directory: path.join(__dirname, '/dist')
+  },
     compress: true,
     port: 8080,
     proxy: {
       '/api': 'http://localhost:3000'
     }
-
  }
-
 }

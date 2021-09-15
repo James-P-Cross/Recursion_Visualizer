@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const PORT = 8080;
+const PORT = 3000;
 
 //Might need to serve up static files at some point
 
-const apiRouter = require('../server/api');
+const apiRouter = require('./api');
 
 // app.use('/dist', express.static(path.join(__dirname, '../dist')));
 

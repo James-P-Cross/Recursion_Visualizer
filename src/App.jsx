@@ -4,15 +4,15 @@ import { render } from 'react-dom';
 //Need to define/get data from parent component and assign to child componenet props attribute
 
 class App extends Component {
-  render() {
-    return (
-      <div>
+    render() {
+      return (
+        <div>
         <h1>Recursion Here</h1>
         <CodeForm/>
         <Visual/>
       </div>
-    );
-  }
+      )
+    }
 }
 
 class Visual extends Component {
@@ -66,5 +66,6 @@ class CodeForm extends Component {
   }
 }
 
-// export default App;
-render(<App />, document.querySelector('#root'));
+
+export default App;
+// render(<App />, document.querySelector('#root'));
