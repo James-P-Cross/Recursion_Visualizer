@@ -7,17 +7,16 @@ const fileController = require('./controller');
 
 const router = express.Router();
 
+//or route to api instead??
+//just / would skip over your controllers
 router.use('/', 
   fileController.recursion,
   (req, res, next) => {
     //do i send this as a json? An object that react is expecting cause I don't have that set up yet. . .
-    //the visuals
-    //return answer to function AKA output
-    res.status(200).json({
-    //   console.log(res.locals.Visuals),
-      // Visuals: [...res.locals.Visuals]
-    });
+    // console.log(res.locals.Visuals)
+    res.status(200).json([res.locals.Visuals]);
+    res.status(200).send([res.locals.Visuals]);
   }
-)
+);
 
 module.exports = router;
