@@ -10,14 +10,25 @@ const router = express.Router('./api.js');
 
 //or route to api instead??
 //just / would skip over your controllers
-router.use('/', 
+router.get('/', 
   fileController.recursion,
-  (req, res, next) => {
+  (req, res) => {
     //do i send this as a json? An object that react is expecting cause I don't have that set up yet. . .
     // console.log(res.locals.Visuals)
-    res.status(200).json([res.locals.Visuals]);
+    res.status(200).json(res.locals.visuals);
     // res.status(200).send([res.locals.Visuals]);
   }
 );
+
+router.post('/', 
+  fileController.recursionPost,
+  (req, res) => {
+    console.log('post received in contorller');
+
+    res.status(200).json('request received');
+    // res.status(200).send([res.locals.Visuals]);
+  }
+);
+
 
 module.exports = router;

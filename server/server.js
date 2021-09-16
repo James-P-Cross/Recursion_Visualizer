@@ -19,12 +19,12 @@ const apiRouter = require('./api');
 app.use(express.json());
 
  //mapping endpoints to the proper router. Any request from this endpoint should be sent to this router.
-app.use('/', apiRouter);
+app.use('/api', apiRouter);
 
 //Might need to send html file on load something like this
-app.get('/', (req, res) => {
-  res.status(200).sendFile(path.resolve(__dirname, '.src.index.html'));
-});
+// app.get('/', (req, res) => {
+//   res.status(200).sendFile(path.resolve(__dirname, '.src.index.html'));
+// });
 
 //catch-all route handler
 app.use('*', (req, res) => {
