@@ -3,13 +3,13 @@ h1 {
 }
 
 .box {
-    height:500px;
+    height:400px;
     width: 1000px;
     background-color: coral;
 }
 
 #textArea {
-    background-color: darkgoldenrod;
+    background-color: rgb(202, 199, 192);
 }
 
 body {
@@ -17,6 +17,6 @@ body {
 }
 
 .submitButton {
-    background-color: darkgreen;
+    background-color: rgb(238, 124, 200);
 }
 

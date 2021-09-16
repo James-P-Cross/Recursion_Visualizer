@@ -2,42 +2,37 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 //Need to define/get data from parent component and assign to child componenet props attribute
+//component ideally should only do one thing. . .
 
 class App extends Component {
   constructor(props) {
     super(props);
+    // this.state = {
+    //   Visuals : 'none and more text from state'
+    // };
 
-    this.state = {
-      Visuals : 'none'
-    };
   }
     render() {
       return (
         <div>
-        <h1>Recursion Here</h1>
+        {/* <h1>Recursion Here</h1> */}
         <CodeForm/>
-        <Visual/>
+        {/* <Visual/> */}
+        <div>
+        {/* <CodeForm visualProp = {this.state.Visuals}/> */}
+        </div>
       </div>
       )
     }
 }
 
-class Visual extends Component {
-  //must set state in the top componant AKA the stateful component
-
-
-
-  render() {
-    return (
-      <p>test332</p>
-  
-    );
-  }
-}
-
 class CodeForm extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      Visuals: 'no visuals yet',
+      theCode: 'lots of code in here'
+    }
 
   }
   
@@ -81,16 +76,43 @@ class CodeForm extends Component {
 
 
   render() {
+    const vis = this.state.Visuals;
     return (
       <div>
-      <p>{this.props.Visuals}</p>
-      <h2>James</h2>
-        <button type="button" className="submitButton" onClick={this.submitCode}>SubmitReact</button>
+      <div>{vis}</div>
+      <h2>Recursion Visualizer</h2>
+      {<textarea id="textArea" name="textArea" rows="20" cols="100"> Type recursive function here. . .  </textarea>}
+      <div>
+        <button type="button" className="submitButton" onClick={this.submitCode}>Start Visualizer</button>
+      </div>
+    <div className="box"></div>
+    <Visual theCode = {this.state.theCode}/>
 
-      
-      
-    {<textarea id="textArea" name="textArea" rows="20" cols="50"> </textarea>}
     </div>
+    );
+  }
+}
+
+class Visual extends Component {
+  //must set state in the top componant AKA the stateful component
+  // constructor(props) {
+  //   super();
+  //   this.state = {
+  //     theCode : this.props.theCode
+  //   }
+  // }
+
+
+
+  render() {
+    const someCode = this.props.theCode;
+
+    return (
+      <>
+      <div>{someCode}</div>
+
+      <p>This text is from Visual component</p>
+  </>
     );
   }
 }
