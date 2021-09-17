@@ -1,22 +1,56 @@
+/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+</style> */
+
 h1 {
     color: red;
+}
+
+h2 {
+    margin-bottom: 10px;
+    margin-left: 200px;
+    font-size: 42px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .box {
     height:400px;
     width: 1000px;
-    background-color: coral;
+    background-color: rgb(245, 130, 88);
+    margin-top: 50px;
+    margin-left: 10px;
+    border-radius: 5px;
+
+}
+
+.visButton {
+    margin-left: 10px;
+
 }
 
 #textArea {
     background-color: rgb(202, 199, 192);
+    margin-left: 10px;
+    border-radius: 5px;
+
+
+}
+
+.basecase {
+    margin-left: 19px;
+    font-size: 18px;
+
 }
 
 body {
     background-color: rgb(170, 170, 235);
+    margin-left: 10px;
+
 }
 
 .submitButton {
     background-color: rgb(238, 124, 200);
+    margin-left: 10px;
+
 }
 

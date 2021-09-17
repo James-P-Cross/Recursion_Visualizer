@@ -10,18 +10,27 @@ fileController.recursion = (req, res, next) => {
   return next();
 };
 
+// fileController.recursionPost = (req, res, next) => {
+//   console.log('controller reached post');
+//   // console.log(req)
+//   console.log(req.body);
+//   //send to or have big function in here
+//   const result = 'Visualizer coming soon. . .';
+//   res.locals.testSend = result;
+
+//   // res.locals.testSend = result;
+//   // console.log(res.locals.testSend);
+//   return next();
+// };
+
+
 fileController.recursionPost = (req, res, next) => {
   console.log('controller reached post');
-  console.log(req)
+  // console.log(req)
   console.log(req.body);
   //send to or have big function in here
-
-
-
-  // const result = 'response received';
-
-
-
+  const result = 'Visualizer coming soon. . .';
+  res.locals.testSend = result;
 
   // res.locals.testSend = result;
   // console.log(res.locals.testSend);

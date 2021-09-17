@@ -23,9 +23,11 @@ router.get('/',
 router.post('/', 
   fileController.recursionPost,
   (req, res) => {
-    console.log('post received in contorller');
+    console.log('post received in api');
+    console.log(res.locals.testSend);
+    res.status(200).json(res.locals.testSend);
 
-    res.status(200).json('request received');
+    // res.status(200).json('request received');
     // res.status(200).send([res.locals.Visuals]);
   }
 );
